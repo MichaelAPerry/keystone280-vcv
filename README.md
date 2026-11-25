@@ -1,25 +1,41 @@
 # Keystone 280
 
-Keystone 280 is a collection of 14 software modules for VCV Rack 2. Michael Perry built them from the modules in his own Behringer System 15 rack, which includes Moog 900-series-derived designs, and calibrated them against bench recordings and measurements of that rack. The result is close, not identical. See [Calibration](CALIBRATION.md) for the measurements and assumptions behind each module.
+Fourteen VCV Rack 2 modules modelled on a real modular rack.
 
-Read the [user manual](docs/MANUAL.md) for controls, patch examples and voltage ranges.
+![The 14 Keystone 280 modules](docs/img/keystone280.png)
+
+These modules are based on the hardware in my own rack: a Behringer System 15, Behringer's take on the classic 1960s Moog 900-series modules, plus a few others. I measured the rack on the bench (pitch, levels, waveforms, filter response, envelope times and sequencer timing) and tuned the models to those recordings. They're close, not identical. Each module is named after a Pennsylvania river.
 
 ## Modules
 
-- **Susquehanna Oscillator** — Pitch-controlled oscillator with six ranges, sub-audio operation and clamp sync.
-- **Schuylkill VCA** — Linear or exponential amplifier with summed control inputs and complementary signal paths.
-- **Lehigh Envelope** — Attack, decay, sustain and release envelope with active-low triggering.
-- **Allegheny Low-Pass** — Four-pole low-pass filter with three cutoff ranges and self-oscillating resonance.
-- **Monongahela High-Pass** — Four-pole high-pass filter with two cutoff ranges and summed cutoff modulation.
-- **Lackawanna Filters & Noise** — Independent low-pass and high-pass filters plus white and pink noise.
-- **Brandywine Filter Bank** — Twelve fixed band-pass bands with independent levels and low-pass and high-pass branches.
-- **Juniata Sequencer** — Three rows of eight stages with an internal clock, stage modes and optional third-row timing.
-- **Conestoga Interface** — Converts audio and voltage triggers to patchable trigger signals, with two timed active-low banks.
-- **Tioga Sequential Switch** — Two- or three-stage signal switch with advance, direct stage selection and stage gates.
-- **Clarion Mixer** — Four-channel mixer with master gain, complementary outputs and two signal multiples.
-- **Kiski Attenuators** — Four cascaded attenuators, two signal multiples and bipolar reference voltages.
-- **Loyalsock Function Generator** — Two rise/fall generators and four attenuverters with sum, inversion and maximum outputs.
-- **Swatara Quantizer** — Scale and chord quantizer with three outputs, a shift register and a hold loop.
+| Module | What it does |
+| :--- | :--- |
+| Susquehanna Oscillator | Oscillator with six octave ranges, a sub-audio mode, pulse width and clamp sync. Four waveform outputs plus a selectable aux output. |
+| Schuylkill VCA | Linear or exponential VCA with three summed CV inputs and inverted outputs. |
+| Lehigh Envelope | ADSR envelope with an active-low trigger input, up to about 30 s per stage. |
+| Allegheny Low-Pass | Four-pole ladder low-pass with three ranges and resonance up to self-oscillation. |
+| Monongahela High-Pass | Four-pole high-pass with two ranges. |
+| Lackawanna Filters & Noise | A simple low-pass and high-pass pair plus white and pink noise. |
+| Brandywine Filter Bank | Twelve fixed bands with level controls, plus low-pass and high-pass ends. |
+| Juniata Sequencer | Three rows by eight stages with its own clock, per-stage modes and optional third-row timing. |
+| Conestoga Interface | Turns audio and voltages into triggers: two timed trigger banks and a signal detector. |
+| Tioga Sequential Switch | Steps a signal through two or three outputs, or selects one directly. |
+| Clarion Mixer | Four-channel mixer with inverted outputs and signal copies. |
+| Kiski Attenuators | Four attenuators, signal copies and fixed reference voltages. |
+| Loyalsock Function Generator | Two rise/fall generators that can cycle as LFOs, four attenuverters, sum and max outputs. |
+| Swatara Quantizer | Scale and chord quantizer with three outputs, a shift register and a hold loop. |
+
+All jacks are monophonic. Controls, voltages and patch ideas for every module are in the [manual](docs/MANUAL.md).
+
+## Install
+
+Once the plugin is listed in the VCV Library, install it from there (search "Keystone 280"). Until then, download the `.vcvplugin` file for your system from [Releases](https://github.com/MichaelAPerry/keystone280-vcv/releases), put it in Rack's plugins folder (Help > Open user folder), and restart Rack.
+
+## How it was made
+
+I recorded and measured each module on my rack, then tuned the models until they matched. [CALIBRATION.md](CALIBRATION.md) lists, module by module, what was measured and what came from documentation.
+
+The code was written by AI coding agents (Claude and Codex) working from my plans, measurements and listening. I directed the work and checked it against the real rack. Automated tests run on every change, including a crash test that throws noise, extreme voltages and invalid values at every input.
 
 ## Build
 
@@ -51,6 +67,6 @@ python3 tools/check_panels.py
 
 ## Credits and license
 
-DSP, bench calibration and public panel designs by Michael Perry. Rack integration uses the VCV Rack SDK and its standard widgets. The panels use [Bricolage Grotesque](https://github.com/ateliertriay/bricolage) under the [SIL Open Font License 1.1](tools/fonts/OFL.txt).
+Panels use Bricolage Grotesque under the [SIL Open Font License 1.1](tools/fonts/OFL.txt). The code is licensed under [GPL-3.0-or-later](LICENSE).
 
-Keystone 280 source is licensed under [GPL-3.0-or-later](LICENSE).
+Behringer and Moog are trademarks of their respective owners. This project is not affiliated with or endorsed by either company.
