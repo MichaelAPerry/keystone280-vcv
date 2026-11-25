@@ -29,6 +29,8 @@ All jacks are monophonic. Controls, voltages and patch ideas for every module ar
 
 ## Install
 
+**Status: Released.** [Version 2.0.0](https://github.com/MichaelAPerry/keystone280-vcv/releases/tag/v2.0.0) provides packages for Windows x64, Linux x64, and macOS on Intel and Apple silicon. These packages target VCV Rack 2.
+
 Once the plugin is listed in the VCV Library, install it from there (search "Keystone 280"). Until then, download the `.vcvplugin` file for your system from [Releases](https://github.com/MichaelAPerry/keystone280-vcv/releases), put it in Rack's plugins folder (Help > Open user folder), and restart Rack.
 
 ## How it was made
