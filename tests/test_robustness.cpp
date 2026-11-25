@@ -10,6 +10,17 @@
 #include "../src/input_voltage.hpp"
 #include "build/wrappers.hpp"
 
+// Per-instance CPU budget in percent of real time. It exists to catch denormal or
+// runaway stalls (10x and more), not to benchmark. Shared CI machines are slower and
+// noisier, so CI raises it with K280_CPU_BUDGET.
+static double cpuBudget() {
+    static const double budget = [] {
+        const char* env = std::getenv("K280_CPU_BUDGET");
+        return env ? std::atof(env) : 5.;
+    }();
+    return budget;
+}
+
 namespace {
 
 constexpr int blockSize = 64;
@@ -98,18 +109,18 @@ void run(const char* name, int rate) {
             const auto now = std::clock();
             const double percent = 100. * (now - intervalStart) / CLOCKS_PER_SEC / Count;
             worstPercent = std::max(worstPercent, percent);
-            if (frame + 1 >= 7 * rate && percent >= 5.) {
+            if (frame + 1 >= 7 * rate && percent >= cpuBudget()) {
                 std::cerr << name << " at " << rate << " Hz, second " << (frame + 1) / rate
-                          << ": " << percent << "% CPU per instance exceeds the 5% budget\n";
+                          << ": " << percent << "% CPU per instance exceeds the " << cpuBudget() << "% budget\n";
                 std::exit(EXIT_FAILURE);
             }
             intervalStart = now;
         }
     }
     const double percent = 100. * (intervalStart - start) / CLOCKS_PER_SEC / (10. * Count);
-    if (percent >= 5.) {
+    if (percent >= cpuBudget()) {
         std::cerr << name << " at " << rate << " Hz: " << percent
-                  << "% mean CPU per instance exceeds the 5% budget\n";
+                  << "% mean CPU per instance exceeds the " << cpuBudget() << "% budget\n";
         std::exit(EXIT_FAILURE);
     }
     std::cout << name << " " << rate << " Hz, " << Count << " instance(s): peak "
