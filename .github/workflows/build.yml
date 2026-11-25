@@ -1,0 +1,61 @@
+name: Build Rack plugin
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  linux-windows:
+    name: ${{ matrix.target }}
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/qno/rack-plugin-toolchain-win-linux
+      options: --user root
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [lin-x64, win-x64]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build with the Rack plugin toolchain
+        working-directory: /home/build/rack-plugin-toolchain
+        run: make "plugin-build-${{ matrix.target }}" PLUGIN_DIR="$GITHUB_WORKSPACE"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.target }}
+          path: /home/build/rack-plugin-toolchain/plugin-build/*.vcvplugin
+          if-no-files-found: error
+
+  mac:
+    name: mac-${{ matrix.arch }}
+    runs-on: ${{ matrix.runner }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: x64
+            runner: macos-15-intel
+          - arch: arm64
+            runner: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch target Rack SDK
+        env:
+          ARCH: ${{ matrix.arch }}
+        run: |
+          curl --fail --location --retry 3 "https://vcvrack.com/downloads/Rack-SDK-2.6.4-mac-${ARCH}.zip" -o "$RUNNER_TEMP/Rack-SDK.zip"
+          unzip -q "$RUNNER_TEMP/Rack-SDK.zip" -d "$RUNNER_TEMP"
+      - name: Build plugin
+        run: |
+          command -v zstd >/dev/null || brew install zstd
+          make -j"$(sysctl -n hw.ncpu)" dist RACK_DIR="$RUNNER_TEMP/Rack-SDK"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mac-${{ matrix.arch }}
+          path: dist/*.vcvplugin
+          if-no-files-found: error

@@ -1,0 +1,41 @@
+slug: Brandywine
+title: BRANDYWINE
+subtitle: FILTER BANK
+hp: 28
+jack_bay:
+- 56.896
+- 97.5
+- 83.844
+- 18.0
+params:
+- {id: LP_LEVEL, x: 10.16, y: 34, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: LOW-PASS}
+- {id: BAND1, x: 30.48, y: 34, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: 125
+    Hz}
+- {id: BAND2, x: 50.8, y: 34, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: 175 Hz}
+- {id: BAND3, x: 71.12, y: 34, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: 250
+    Hz}
+- {id: BAND4, x: 91.44, y: 34, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: 350
+    Hz}
+- {id: BAND5, x: 111.76, y: 34, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: 500
+    Hz}
+- {id: BAND6, x: 132.08, y: 34, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: 700
+    Hz}
+- {id: BAND7, x: 10.16, y: 65, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: 1000
+    Hz}
+- {id: BAND8, x: 30.48, y: 65, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: 1400
+    Hz}
+- {id: BAND9, x: 50.8, y: 65, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: 2000
+    Hz}
+- {id: BAND10, x: 71.12, y: 65, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: 2800
+    Hz}
+- {id: BAND11, x: 91.44, y: 65, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: 4000
+    Hz}
+- {id: BAND12, x: 111.76, y: 65, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: 5600
+    Hz}
+- {id: HP_LEVEL, x: 132.08, y: 65, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: HIGH-PASS}
+inputs:
+- {id: IN, x: 14.224, y: 110.0, label: IN}
+outputs:
+- {id: IN_THRU, x: 71.12, y: 110.0, label: THRU}
+- {id: OUT, x: 99.568, y: 110.0, label: OUT}
+- {id: OUT2, x: 128.016, y: 110.0, label: OUT 2}

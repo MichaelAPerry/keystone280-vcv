@@ -1,0 +1,148 @@
+{
+  "slug": "MichaelPerry-Keystone280",
+  "name": "Keystone 280",
+  "brand": "Keystone 280",
+  "license": "GPL-3.0-or-later",
+  "author": "Michael Perry",
+  "authorEmail": "",
+  "sourceUrl": "https://github.com/MichaelAPerry/keystone280-vcv",
+  "version": "2.0.0",
+  "minRackVersion": "2.4.0",
+  "modules": [
+    {
+      "slug": "Susquehanna",
+      "name": "Susquehanna Oscillator",
+      "description": "Pitch-controlled oscillator with six ranges, sub-audio operation and clamp sync.",
+      "tags": [
+        "Oscillator",
+        "Low-frequency oscillator"
+      ],
+      "keywords": "921"
+    },
+    {
+      "slug": "Schuylkill",
+      "name": "Schuylkill VCA",
+      "description": "Linear or exponential amplifier with summed control inputs and complementary signal paths.",
+      "tags": [
+        "Voltage-controlled amplifier"
+      ],
+      "keywords": "902"
+    },
+    {
+      "slug": "Lehigh",
+      "name": "Lehigh Envelope",
+      "description": "Attack, decay, sustain and release envelope with active-low triggering.",
+      "tags": [
+        "Envelope generator"
+      ],
+      "keywords": "911"
+    },
+    {
+      "slug": "Allegheny",
+      "name": "Allegheny Low-Pass",
+      "description": "Four-pole low-pass filter with three cutoff ranges and self-oscillating resonance.",
+      "tags": [
+        "Filter"
+      ],
+      "keywords": "904A"
+    },
+    {
+      "slug": "Monongahela",
+      "name": "Monongahela High-Pass",
+      "description": "Four-pole high-pass filter with two cutoff ranges and summed cutoff modulation.",
+      "tags": [
+        "Filter"
+      ],
+      "keywords": "904B"
+    },
+    {
+      "slug": "Lackawanna",
+      "name": "Lackawanna Filters & Noise",
+      "description": "Independent low-pass and high-pass filters plus white and pink noise.",
+      "tags": [
+        "Filter",
+        "Noise"
+      ],
+      "keywords": "923"
+    },
+    {
+      "slug": "Brandywine",
+      "name": "Brandywine Filter Bank",
+      "description": "Twelve fixed band-pass bands with independent levels and low-pass and high-pass branches.",
+      "tags": [
+        "Filter",
+        "Equalizer"
+      ],
+      "keywords": "914"
+    },
+    {
+      "slug": "Juniata",
+      "name": "Juniata Sequencer",
+      "description": "Three rows of eight stages with an internal clock, stage modes and optional third-row timing.",
+      "tags": [
+        "Sequencer",
+        "Clock generator"
+      ],
+      "keywords": "960"
+    },
+    {
+      "slug": "Conestoga",
+      "name": "Conestoga Interface",
+      "description": "Converts audio and voltage triggers to patchable trigger signals, with two timed active-low banks.",
+      "tags": [
+        "Utility"
+      ],
+      "keywords": "961"
+    },
+    {
+      "slug": "Tioga",
+      "name": "Tioga Sequential Switch",
+      "description": "Two- or three-stage signal switch with advance, direct stage selection and stage gates.",
+      "tags": [
+        "Switch",
+        "Sequencer"
+      ],
+      "keywords": "962"
+    },
+    {
+      "slug": "Clarion",
+      "name": "Clarion Mixer",
+      "description": "Four-channel mixer with master gain, complementary outputs and two signal multiples.",
+      "tags": [
+        "Mixer",
+        "Multiple"
+      ],
+      "keywords": "CP3A-M"
+    },
+    {
+      "slug": "Kiski",
+      "name": "Kiski Attenuators",
+      "description": "Four cascaded attenuators, two signal multiples and bipolar reference voltages.",
+      "tags": [
+        "Attenuator",
+        "Multiple"
+      ],
+      "keywords": "CP35"
+    },
+    {
+      "slug": "Loyalsock",
+      "name": "Loyalsock Function Generator",
+      "description": "Two rise/fall generators and four attenuverters with sum, inversion and maximum outputs.",
+      "tags": [
+        "Function generator",
+        "Envelope generator",
+        "Slew limiter"
+      ],
+      "keywords": "Abacus"
+    },
+    {
+      "slug": "Swatara",
+      "name": "Swatara Quantizer",
+      "description": "Scale and chord quantizer with three outputs, a shift register and a hold loop.",
+      "tags": [
+        "Quantizer"
+      ],
+      "keywords": "Quantimator"
+    }
+  ]
+}

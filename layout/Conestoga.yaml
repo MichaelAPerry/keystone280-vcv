@@ -1,0 +1,53 @@
+slug: Conestoga
+title: CONESTOGA
+subtitle: INTERFACE
+hp: 21
+jack_bay:
+- 66.675
+- 39.5
+- 38.505
+- 78.0
+params:
+- {id: TIME1, x: 17.78, y: 25, widget: knob, dial: {start: -148, end: 148, labels: ['', '', '']}, label: BANK
+    1 TIME}
+- {id: TIME2, x: 53.34, y: 25, widget: knob, dial: {start: -148, end: 148, labels: ['', '', '']}, label: BANK
+    2 TIME}
+- {id: SENS, x: 88.9, y: 25, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: AUDIO
+    SENSE}
+inputs:
+- {id: AUD_IN, x: 6.668, y: 52.0, label: AUDIO}
+- {id: S_IN1, x: 20.003, y: 52.0, label: S 1}
+- {id: A11, x: 33.338, y: 52.0, label: 1A 1}
+- {id: B11, x: 46.673, y: 52.0, label: 1B 1}
+- {id: A12, x: 60.008, y: 52.0, label: 1A 2}
+- {id: B12, x: 6.668, y: 64.0, label: 1B 2}
+- {id: A13, x: 20.003, y: 64.0, label: 1A 3}
+- {id: B13, x: 33.338, y: 64.0, label: 1B 3}
+- {id: S_IN2, x: 46.673, y: 64.0, label: S 2}
+- {id: A21, x: 60.008, y: 64.0, label: 2A 1}
+- {id: B21, x: 6.668, y: 76.0, label: 2B 1}
+- {id: A22, x: 20.003, y: 76.0, label: 2A 2}
+- {id: B22, x: 33.338, y: 76.0, label: 2B 2}
+- {id: A23, x: 46.673, y: 76.0, label: 2A 3}
+- {id: B23, x: 60.008, y: 76.0, label: 2B 3}
+- {id: A14, x: 6.668, y: 88.0, label: 1A 4}
+- {id: B14, x: 20.003, y: 88.0, label: 1B 4}
+- {id: A15, x: 33.338, y: 88.0, label: 1A 5}
+- {id: B15, x: 46.673, y: 88.0, label: 1B 5}
+- {id: A16, x: 60.008, y: 88.0, label: 1A 6}
+- {id: B16, x: 6.668, y: 100.0, label: 1B 6}
+- {id: A24, x: 20.003, y: 100.0, label: 2A 4}
+- {id: B24, x: 33.338, y: 100.0, label: 2B 4}
+- {id: A25, x: 46.673, y: 100.0, label: 2A 5}
+- {id: B25, x: 60.008, y: 100.0, label: 2B 5}
+- {id: A26, x: 6.668, y: 112.0, label: 2A 6}
+- {id: B26, x: 20.003, y: 112.0, label: 2B 6}
+outputs:
+- {id: AVT1, x: 73.343, y: 52.0, label: AUDIO V1}
+- {id: AVT2, x: 86.678, y: 52.0, label: AUDIO V2}
+- {id: SV1a, x: 100.013, y: 52.0, label: V 1A}
+- {id: SV1b, x: 73.343, y: 64.0, label: V 1B}
+- {id: SOUT1, x: 86.678, y: 64.0, label: S BANK 1}
+- {id: SV2a, x: 100.013, y: 64.0, label: V 2A}
+- {id: SV2b, x: 73.343, y: 76.0, label: V 2B}
+- {id: SOUT2, x: 86.678, y: 76.0, label: S BANK 2}

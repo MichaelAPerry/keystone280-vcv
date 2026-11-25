@@ -1,0 +1,19 @@
+slug: Monongahela
+title: MONONGAHELA
+subtitle: HIGH-PASS
+hp: 8
+jack_bay:
+- 20.32
+- 87.5
+- 18.82
+- 30.0
+params:
+- {id: FIXED_CV, x: 10.16, y: 35, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: CUTOFF}
+- {id: RANGE, x: 30.48, y: 35, widget: snap, dial: {labels: [LOW, HIGH], start: -22, end: 22, r: 11.6}, label: RANGE}
+inputs:
+- {id: IN, x: 5.08, y: 100.0, label: IN}
+- {id: CV1, x: 15.24, y: 100.0, label: CV 1}
+- {id: CV2, x: 5.08, y: 112.0, label: CV 2}
+- {id: CV3, x: 15.24, y: 112.0, label: CV 3}
+outputs:
+- {id: OUT, x: 25.4, y: 100.0, label: OUT}

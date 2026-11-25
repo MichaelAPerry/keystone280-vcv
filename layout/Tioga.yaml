@@ -1,0 +1,31 @@
+slug: Tioga
+title: TIOGA
+subtitle: SEQUENTIAL SWITCH
+hp: 8
+jack_bay:
+- 20.32
+- 63.5
+- 18.82
+- 54.0
+params:
+- {id: BTN1, x: 6.773, y: 43, widget: button, label: SELECT 1}
+- {id: BTN2, x: 20.32, y: 43, widget: button, label: SELECT 2}
+- {id: BTN3, x: 33.867, y: 43, widget: button, label: SELECT 3}
+inputs:
+- {id: TIN1, x: 5.08, y: 76.0, label: SEL 1}
+- {id: TIN2, x: 15.24, y: 76.0, label: SEL 2}
+- {id: TIN3, x: 5.08, y: 88.0, label: SEL 3}
+- {id: SHIFT, x: 15.24, y: 88.0, label: SHIFT}
+- {id: SIN1, x: 5.08, y: 100.0, label: SIG 1}
+- {id: SIN2, x: 15.24, y: 100.0, label: SIG 2}
+- {id: SIN3, x: 5.08, y: 112.0, label: SIG 3}
+outputs:
+- {id: TOUT1, x: 25.4, y: 76.0, label: GATE 1}
+- {id: TOUT2, x: 35.56, y: 76.0, label: GATE 2}
+- {id: TOUT3, x: 25.4, y: 88.0, label: GATE 3}
+- {id: OUT1, x: 35.56, y: 88.0, label: OUT 1}
+- {id: OUT2, x: 25.4, y: 100.0, label: OUT 2}
+lights:
+- {id: LIGHT1, x: 6.773, y: 52}
+- {id: LIGHT2, x: 20.32, y: 52}
+- {id: LIGHT3, x: 33.867, y: 52}

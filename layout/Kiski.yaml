@@ -1,0 +1,40 @@
+slug: Kiski
+title: KISKI
+subtitle: ATTENUATORS
+hp: 21
+jack_bay:
+- 40.005
+- 63.5
+- 65.175
+- 42.0
+params:
+- {id: ATT1, x: 13.335, y: 42, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: ATT
+    1}
+- {id: ATT2, x: 40.005, y: 42, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: ATT
+    2}
+- {id: ATT3, x: 66.675, y: 42, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: ATT
+    3}
+- {id: ATT4, x: 93.345, y: 42, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: ATT
+    4}
+inputs:
+- {id: AIN1, x: 6.668, y: 76.0, label: IN 1}
+- {id: AIN2, x: 20.003, y: 76.0, label: IN 2}
+- {id: AIN3, x: 33.337, y: 76.0, label: IN 3}
+- {id: AIN4, x: 6.668, y: 88.0, label: IN 4}
+- {id: MA_IN, x: 20.003, y: 88.0, label: MULT A}
+- {id: MB_IN, x: 33.337, y: 88.0, label: MULT B}
+outputs:
+- {id: AOUT1, x: 46.673, y: 76.0, label: OUT 1}
+- {id: AOUT2, x: 60.008, y: 76.0, label: OUT 2}
+- {id: AOUT3, x: 73.343, y: 76.0, label: OUT 3}
+- {id: AOUT4, x: 86.678, y: 76.0, label: OUT 4}
+- {id: N6A, x: 100.013, y: 76.0, label: -6 V A}
+- {id: N6B, x: 46.673, y: 88.0, label: -6 V B}
+- {id: P6A, x: 60.008, y: 88.0, label: +6 V A}
+- {id: P6B, x: 73.343, y: 88.0, label: +6 V B}
+- {id: MA_OUT2, x: 86.678, y: 88.0, label: A COPY 1}
+- {id: MA_OUT3, x: 100.013, y: 88.0, label: A COPY 2}
+- {id: MA_OUT4, x: 46.673, y: 100.0, label: A COPY 3}
+- {id: MB_OUT2, x: 60.008, y: 100.0, label: B COPY 1}
+- {id: MB_OUT3, x: 73.343, y: 100.0, label: B COPY 2}
+- {id: MB_OUT4, x: 86.678, y: 100.0, label: B COPY 3}

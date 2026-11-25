@@ -1,0 +1,30 @@
+slug: Swatara
+title: SWATARA
+subtitle: QUANTIZER
+hp: 8
+jack_bay:
+- 20.32
+- 74.5
+- 18.82
+- 42.0
+params:
+- {id: MODE, x: 10.16, y: 27, widget: toggle, up: SCALE, down: CHORD, label: MODE}
+- {id: CHORD_SCALE, x: 10.16, y: 48, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: TYPE}
+- {id: CS_ATT, x: 30.48, y: 48, widget: knob, dial: {start: -135, end: 135, labels: ['', '', '']}, label: TYPE
+    CV AMT}
+- {id: TRANSPOSE, x: 20.32, y: 69, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: TRANSPOSE}
+inputs:
+- {id: TRANS, x: 5.08, y: 87.0, label: TRANS}
+- {id: TRIG, x: 15.24, y: 87.0, label: TRIG}
+- {id: HOLD, x: 5.08, y: 99.0, label: HOLD}
+- {id: CSCV, x: 15.24, y: 99.0, label: TYPE CV}
+- {id: IN, x: 5.08, y: 111.0, label: IN}
+outputs:
+- {id: OUT3, x: 25.4, y: 87.0, label: OUT 3}
+- {id: OUT2, x: 35.56, y: 87.0, label: OUT 2}
+- {id: OUT1, x: 25.4, y: 99.0, label: OUT 1}
+display:
+- 23
+- 22
+- 13
+- 10

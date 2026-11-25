@@ -1,0 +1,121 @@
+slug: Juniata
+title: JUNIATA
+subtitle: SEQUENCER
+hp: 56
+jack_bay:
+- 127.526
+- 100
+- 155.454
+- 23
+params:
+- {id: SET1, x: 49, y: 25, widget: button, label: STAGE 1}
+- {id: MODE1, x: 53, y: 44, widget: snap, dial: {labels: [SKIP, NORMAL, STOP], start: -40, end: 40, r: 10.5}}
+- {id: KNOB_A1, x: 53, y: 61, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: KNOB_B1, x: 53, y: 77, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: KNOB_C1, x: 53, y: 93, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: SET2, x: 72, y: 25, widget: button, label: STAGE 2}
+- {id: MODE2, x: 76, y: 44, widget: snap, dial: {labels: [SKIP, NORMAL, STOP], start: -40, end: 40, r: 10.5}}
+- {id: KNOB_A2, x: 76, y: 61, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: KNOB_B2, x: 76, y: 77, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: KNOB_C2, x: 76, y: 93, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: SET3, x: 95, y: 25, widget: button, label: STAGE 3}
+- {id: MODE3, x: 99, y: 44, widget: snap, dial: {labels: [SKIP, NORMAL, STOP], start: -40, end: 40, r: 10.5}}
+- {id: KNOB_A3, x: 99, y: 61, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: KNOB_B3, x: 99, y: 77, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: KNOB_C3, x: 99, y: 93, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: SET4, x: 118, y: 25, widget: button, label: STAGE 4}
+- {id: MODE4, x: 122, y: 44, widget: snap, dial: {labels: [SKIP, NORMAL, STOP], start: -40, end: 40, r: 10.5}}
+- {id: KNOB_A4, x: 122, y: 61, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: KNOB_B4, x: 122, y: 77, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: KNOB_C4, x: 122, y: 93, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: SET5, x: 141, y: 25, widget: button, label: STAGE 5}
+- {id: MODE5, x: 145, y: 44, widget: snap, dial: {labels: [SKIP, NORMAL, STOP], start: -40, end: 40, r: 10.5}}
+- {id: KNOB_A5, x: 145, y: 61, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: KNOB_B5, x: 145, y: 77, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: KNOB_C5, x: 145, y: 93, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: SET6, x: 164, y: 25, widget: button, label: STAGE 6}
+- {id: MODE6, x: 168, y: 44, widget: snap, dial: {labels: [SKIP, NORMAL, STOP], start: -40, end: 40, r: 10.5}}
+- {id: KNOB_A6, x: 168, y: 61, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: KNOB_B6, x: 168, y: 77, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: KNOB_C6, x: 168, y: 93, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: SET7, x: 187, y: 25, widget: button, label: STAGE 7}
+- {id: MODE7, x: 191, y: 44, widget: snap, dial: {labels: [SKIP, NORMAL, STOP], start: -40, end: 40, r: 10.5}}
+- {id: KNOB_A7, x: 191, y: 61, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: KNOB_B7, x: 191, y: 77, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: KNOB_C7, x: 191, y: 93, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: SET8, x: 210, y: 25, widget: button, label: STAGE 8}
+- {id: MODE8, x: 214, y: 44, widget: snap, dial: {labels: [SKIP, NORMAL, STOP], start: -40, end: 40, r: 10.5}}
+- {id: KNOB_A8, x: 214, y: 61, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: KNOB_B8, x: 214, y: 77, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: KNOB_C8, x: 214, y: 93, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}}
+- {id: SET9, x: 233, y: 25, widget: button, label: STAGE 9}
+- {id: MODE9, x: 237, y: 44, widget: snap, dial: {labels: [SKIP, STOP], start: -32, end: 32, r: 10.3}}
+- {id: OSC_ON_BTN, x: 10, y: 24, widget: button, label: RUN}
+- {id: OSC_OFF_BTN, x: 24, y: 24, widget: button, label: STOP}
+- {id: FREQ_RANGE, x: 18, y: 46, widget: snap, dial: {labels: ['1', '2', '3', '4', '5', '6'], start: -80, end: 80, r: 10.0,
+    ring: false}, label: CLOCK RANGE}
+- {id: VERNIER, x: 18, y: 69, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: CLOCK
+    RATE}
+- {id: SHIFT_BTN, x: 18, y: 92, widget: button, label: ADVANCE}
+- {id: TIMING, x: 266, y: 25, widget: rocker, left: 'OFF', right: 'ON', dx: 9, dy: 0, label: ROW C TIMING}
+- {id: RANGE_A, x: 248, y: 61, widget: snap, dial: {labels: [X1, X2, X4], start: -40, end: 40, r: 10.5}, label: ROW
+    A}
+- {id: RANGE_B, x: 270, y: 77, widget: snap, dial: {labels: [X1, X2, X4], start: -40, end: 40, r: 10.5}, label: ROW
+    B}
+- {id: RANGE_C, x: 248, y: 93, widget: snap, dial: {labels: [X1, X2, X4], start: -40, end: 40, r: 10.5}, label: ROW
+    C}
+inputs:
+- {id: OSC_ON, x: 4.905, y: 108, label: RUN}
+- {id: OSC_OFF, x: 14.714, y: 108, label: STOP}
+- {id: OSC_CV, x: 24.524, y: 108, label: RATE CV}
+- {id: SIN1, x: 34.334, y: 108, label: SET 1}
+- {id: SIN2, x: 44.143, y: 108, label: SET 2}
+- {id: SIN3, x: 53.953, y: 108, label: SET 3}
+- {id: SIN4, x: 63.763, y: 108, label: SET 4}
+- {id: SIN5, x: 73.572, y: 108, label: SET 5}
+- {id: SIN6, x: 83.382, y: 108, label: SET 6}
+- {id: SIN7, x: 93.192, y: 108, label: SET 7}
+- {id: SIN8, x: 103.001, y: 108, label: SET 8}
+- {id: SIN9, x: 112.811, y: 108, label: SET 9}
+- {id: SHIFT, x: 122.621, y: 108, label: SHIFT}
+outputs:
+- {id: OSC_OUT, x: 132.43, y: 108, label: CLOCK}
+- {id: SOUT1, x: 142.24, y: 108, label: GATE 1}
+- {id: SOUT2, x: 152.05, y: 108, label: GATE 2}
+- {id: SOUT3, x: 161.859, y: 108, label: GATE 3}
+- {id: SOUT4, x: 171.669, y: 108, label: GATE 4}
+- {id: SOUT5, x: 181.479, y: 108, label: GATE 5}
+- {id: SOUT6, x: 191.288, y: 108, label: GATE 6}
+- {id: SOUT7, x: 201.098, y: 108, label: GATE 7}
+- {id: SOUT8, x: 210.908, y: 108, label: GATE 8}
+- {id: SOUT9, x: 220.717, y: 108, label: GATE 9}
+- {id: ROWA1, x: 230.527, y: 108, label: A 1}
+- {id: ROWA2, x: 240.337, y: 108, label: A 2}
+- {id: ROWB1, x: 250.146, y: 108, label: B 1}
+- {id: ROWB2, x: 259.956, y: 108, label: B 2}
+- {id: ROWC1, x: 269.766, y: 108, label: C 1}
+- {id: ROWC2, x: 279.575, y: 108, label: C 2}
+labels:
+- - ROW A
+  - 39
+  - 61
+  - 1.6
+- - ROW B
+  - 39
+  - 77
+  - 1.6
+- - ROW C
+  - 39
+  - 93
+  - 1.6
+lights:
+- {id: STAGE_LIGHT1, x: 57, y: 25}
+- {id: STAGE_LIGHT2, x: 80, y: 25}
+- {id: STAGE_LIGHT3, x: 103, y: 25}
+- {id: STAGE_LIGHT4, x: 126, y: 25}
+- {id: STAGE_LIGHT5, x: 149, y: 25}
+- {id: STAGE_LIGHT6, x: 172, y: 25}
+- {id: STAGE_LIGHT7, x: 195, y: 25}
+- {id: STAGE_LIGHT8, x: 218, y: 25}
+- {id: STAGE_LIGHT9, x: 241, y: 25}
+- {id: OSC_LIGHT, x: 33, y: 24}

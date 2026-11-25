@@ -1,0 +1,21 @@
+slug: Schuylkill
+title: SCHUYLKILL
+subtitle: VCA
+hp: 8
+jack_bay:
+- 20.32
+- 76.5
+- 18.82
+- 42.0
+params:
+- {id: FIXED_CV, x: 20.32, y: 38, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: BIAS}
+- {id: MODE, x: 20.32, y: 64, widget: rocker, left: LIN, right: EXP, dx: 9, dy: 0, label: RESPONSE}
+inputs:
+- {id: IN, x: 5.08, y: 89.0, label: IN +}
+- {id: IN2, x: 15.24, y: 89.0, label: IN -}
+- {id: CV1, x: 5.08, y: 101.0, label: CV 1}
+- {id: CV2, x: 15.24, y: 101.0, label: CV 2}
+- {id: CV3, x: 5.08, y: 113.0, label: CV 3}
+outputs:
+- {id: OUTN, x: 25.4, y: 89.0, label: OUT -}
+- {id: OUT, x: 35.56, y: 89.0, label: OUT +}

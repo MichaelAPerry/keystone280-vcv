@@ -1,0 +1,37 @@
+slug: Clarion
+title: CLARION
+subtitle: MIXER
+hp: 14
+jack_bay:
+- 35.56
+- 63.5
+- 34.06
+- 54.0
+params:
+- {id: MASTER, x: 35.56, y: 30, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: MASTER}
+- {id: GAIN1, x: 8.89, y: 54, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: GAIN
+    1}
+- {id: GAIN2, x: 26.67, y: 54, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: GAIN
+    2}
+- {id: GAIN3, x: 44.45, y: 54, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: GAIN
+    3}
+- {id: GAIN4, x: 62.23, y: 54, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: GAIN
+    4}
+inputs:
+- {id: IN1, x: 5.927, y: 76.0, label: IN 1}
+- {id: IN2, x: 17.78, y: 76.0, label: IN 2}
+- {id: IN3, x: 29.633, y: 76.0, label: IN 3}
+- {id: IN4, x: 5.927, y: 88.0, label: IN 4}
+- {id: MA_IN, x: 17.78, y: 88.0, label: MULT A}
+- {id: MB_IN, x: 29.633, y: 88.0, label: MULT B}
+outputs:
+- {id: MA_OUT2, x: 41.487, y: 76.0, label: A COPY 1}
+- {id: MA_OUT3, x: 53.34, y: 76.0, label: A COPY 2}
+- {id: MA_OUT4, x: 65.193, y: 76.0, label: A COPY 3}
+- {id: MB_OUT2, x: 41.487, y: 88.0, label: B COPY 1}
+- {id: MB_OUT3, x: 53.34, y: 88.0, label: B COPY 2}
+- {id: MB_OUT4, x: 65.193, y: 88.0, label: B COPY 3}
+- {id: OUTP1, x: 41.487, y: 100.0, label: + MIX 1}
+- {id: OUTP2, x: 53.34, y: 100.0, label: + MIX 2}
+- {id: OUTN1, x: 65.193, y: 100.0, label: '- MIX 1'}
+- {id: OUTN2, x: 41.487, y: 112.0, label: '- MIX 2'}

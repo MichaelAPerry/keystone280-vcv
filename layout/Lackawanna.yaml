@@ -1,0 +1,22 @@
+slug: Lackawanna
+title: LACKAWANNA
+subtitle: FILTERS & NOISE
+hp: 8
+jack_bay:
+- 20.32
+- 76.5
+- 18.82
+- 42.0
+params:
+- {id: HP, x: 10.16, y: 37, widget: knob, dial: {start: -152, end: 152, labels: ['', '', '']}, label: HIGH-PASS}
+- {id: LP, x: 30.48, y: 37, widget: knob, dial: {start: -152, end: 152, labels: ['', '', '']}, label: LOW-PASS}
+inputs:
+- {id: LP_IN, x: 5.08, y: 89.0, label: LP IN}
+- {id: HP_IN, x: 15.24, y: 89.0, label: HP IN}
+outputs:
+- {id: LP_OUT, x: 25.4, y: 89.0, label: LP OUT}
+- {id: HP_OUT, x: 35.56, y: 89.0, label: HP OUT}
+- {id: WHITE1, x: 25.4, y: 101.0, label: WHITE 1}
+- {id: WHITE2, x: 35.56, y: 101.0, label: WHITE 2}
+- {id: PINK1, x: 25.4, y: 113.0, label: PINK 1}
+- {id: PINK2, x: 35.56, y: 113.0, label: PINK 2}

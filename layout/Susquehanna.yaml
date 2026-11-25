@@ -1,0 +1,38 @@
+slug: Susquehanna
+title: SUSQUEHANNA
+subtitle: OSCILLATOR
+hp: 14
+jack_bay:
+- 35.56
+- 83.5
+- 34.06
+- 30.0
+params:
+- {id: RANGE, x: 12, y: 34, widget: snap, dial: {labels: [32', 16', 8', 4', 2', 1'], start: -100, end: 100},
+  label: RANGE}
+- {id: FREQUENCY, x: 30, y: 34, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: TUNE}
+- {id: SCALE, x: 44.45, y: 34, widget: toggle, up: "\xB112 SEMI", down: "\xB16 OCT", label: SPAN}
+- {id: COARSE, x: 62.23, y: 34, widget: toggle, up: SUB, down: AUDIO, label: RATE}
+- {id: CLAMP, x: 8.89, y: 64, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: CLAMP
+    PHASE}
+- {id: WIDTH, x: 26.67, y: 64, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: PULSE
+    WIDTH}
+- {id: AUX_WAVE, x: 44.45, y: 64, widget: snap, dial: {labels: ['wave:sine', 'wave:tri', 'wave:invsaw', 'wave:saw', 'wave:rect',
+      'wave:invrect'], start: -80, end: 80}, label: AUX WAVE}
+- {id: AUX_LEVEL, x: 62.23, y: 64, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: AUX
+    LEVEL}
+inputs:
+- {id: PW1, x: 4.445, y: 96.0, label: WIDTH 1}
+- {id: PW2, x: 13.335, y: 96.0, label: WIDTH 2}
+- {id: VTRIG, x: 22.225, y: 96.0, label: V-TRIG}
+- {id: STRIG, x: 31.115, y: 96.0, label: S-TRIG}
+- {id: FCV1, x: 4.445, y: 108.0, label: PITCH 1}
+- {id: FCV2, x: 13.335, y: 108.0, label: PITCH 2}
+- {id: FCV3, x: 22.225, y: 108.0, label: PITCH 3}
+outputs:
+- {id: AUXN, x: 40.005, y: 96.0, label: AUX -}
+- {id: AUX, x: 48.895, y: 96.0, label: AUX +}
+- {id: SINE, x: 57.785, y: 96.0, label: SINE}
+- {id: TRI, x: 66.675, y: 96.0, label: TRI}
+- {id: SAW, x: 40.005, y: 108.0, label: SAW}
+- {id: RECT, x: 48.895, y: 108.0, label: PULSE}

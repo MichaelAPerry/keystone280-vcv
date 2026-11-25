@@ -1,0 +1,9 @@
+/build/
+/dep/
+/dist/
+/plugin*.dll
+/plugin*.dylib
+/plugin*.so
+/tests/build/
+__pycache__/
+.venv/

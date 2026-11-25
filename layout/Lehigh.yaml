@@ -1,0 +1,18 @@
+slug: Lehigh
+title: LEHIGH
+subtitle: ENVELOPE
+hp: 8
+jack_bay:
+- 20.32
+- 99.5
+- 18.82
+- 18.0
+params:
+- {id: T1, x: 10.16, y: 35, widget: knob, dial: {start: -148, end: 148, labels: ['', '', '']}, label: ATTACK}
+- {id: T2, x: 30.48, y: 35, widget: knob, dial: {start: -148, end: 148, labels: ['', '', '']}, label: DECAY}
+- {id: ESUS, x: 10.16, y: 68, widget: knob, dial: {start: -150, end: 150, labels: ['', '', '']}, label: SUSTAIN}
+- {id: T3, x: 30.48, y: 68, widget: knob, dial: {start: -148, end: 148, labels: ['', '', '']}, label: RELEASE}
+inputs:
+- {id: STRIG, x: 5.08, y: 112.0, label: S-TRIG}
+outputs:
+- {id: OUT, x: 25.4, y: 112.0, label: OUT}
