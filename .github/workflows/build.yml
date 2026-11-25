@@ -10,6 +10,12 @@ defaults:
     shell: bash
 
 jobs:
+  native-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: make -C tests
+
   linux-windows:
     name: ${{ matrix.target }}
     runs-on: ubuntu-latest
@@ -21,11 +27,11 @@ jobs:
       matrix:
         target: [lin-x64, win-x64]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Build with the Rack plugin toolchain
         working-directory: /home/build/rack-plugin-toolchain
         run: make "plugin-build-${{ matrix.target }}" PLUGIN_DIR="$GITHUB_WORKSPACE"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: ${{ matrix.target }}
           path: /home/build/rack-plugin-toolchain/plugin-build/*.vcvplugin
@@ -43,7 +49,7 @@ jobs:
           - arch: arm64
             runner: macos-15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Fetch target Rack SDK
         env:
           ARCH: ${{ matrix.arch }}
@@ -54,7 +60,7 @@ jobs:
         run: |
           command -v zstd >/dev/null || brew install zstd
           make -j"$(sysctl -n hw.ncpu)" dist RACK_DIR="$RUNNER_TEMP/Rack-SDK"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: mac-${{ matrix.arch }}
           path: dist/*.vcvplugin

@@ -34,12 +34,12 @@ struct TiogaModule : Module {
 
     void process(const ProcessArgs& args) override {
         Seq962::Inputs in;
-        in.shiftV = inputs[SHIFT].getVoltage();
+        in.shiftV = k280vcv::inputVoltage(inputs[SHIFT]);
         in.shiftConnected = inputs[SHIFT].isConnected();
         for (int i = 0; i < 3; i++) {
-            in.tin[i] = inputs[TIN1 + i].getVoltage();
+            in.tin[i] = k280vcv::inputVoltage(inputs[TIN1 + i]);
             in.tinConnected[i] = inputs[TIN1 + i].isConnected();
-            in.sin[i] = inputs[SIN1 + i].getVoltage();
+            in.sin[i] = k280vcv::inputVoltage(inputs[SIN1 + i]);
             in.sinConnected[i] = inputs[SIN1 + i].isConnected();
             in.btn[i] = params[BTN1 + i].getValue() > 0.5f;
         }

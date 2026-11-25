@@ -62,7 +62,7 @@ struct LehighModule : Module {
         p.t3 = params[T3].getValue();
 
         Env911::Inputs in;
-        in.strig = inputs[STRIG].getVoltage();
+        in.strig = k280vcv::inputVoltage(inputs[STRIG]);
         in.strigConnected = inputs[STRIG].isConnected();
 
         outputs[OUT].setVoltage(env.process(args.sampleRate, p, in).out);

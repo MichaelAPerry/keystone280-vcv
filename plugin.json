@@ -8,6 +8,9 @@
   "sourceUrl": "https://github.com/MichaelAPerry/keystone280-vcv",
   "version": "2.0.0",
   "minRackVersion": "2.4.0",
+  "pluginUrl": "https://github.com/MichaelAPerry/keystone280-vcv",
+  "manualUrl": "https://github.com/MichaelAPerry/keystone280-vcv/blob/main/docs/MANUAL.md",
+  "changelogUrl": "https://github.com/MichaelAPerry/keystone280-vcv/blob/main/CHANGELOG.md",
   "modules": [
     {
       "slug": "Susquehanna",
@@ -16,26 +19,23 @@
       "tags": [
         "Oscillator",
         "Low-frequency oscillator"
-      ],
-      "keywords": "921"
+      ]
     },
     {
       "slug": "Schuylkill",
       "name": "Schuylkill VCA",
-      "description": "Linear or exponential amplifier with summed control inputs and complementary signal paths.",
+      "description": "Linear or exponential amplifier with summed control inputs, differential signal input and inverted output.",
       "tags": [
         "Voltage-controlled amplifier"
-      ],
-      "keywords": "902"
+      ]
     },
     {
       "slug": "Lehigh",
       "name": "Lehigh Envelope",
-      "description": "Attack, decay, sustain and release envelope with active-low triggering.",
+      "description": "Attack, decay, sustain and release envelope driven by an active-low gate.",
       "tags": [
         "Envelope generator"
-      ],
-      "keywords": "911"
+      ]
     },
     {
       "slug": "Allegheny",
@@ -43,8 +43,7 @@
       "description": "Four-pole low-pass filter with three cutoff ranges and self-oscillating resonance.",
       "tags": [
         "Filter"
-      ],
-      "keywords": "904A"
+      ]
     },
     {
       "slug": "Monongahela",
@@ -52,8 +51,7 @@
       "description": "Four-pole high-pass filter with two cutoff ranges and summed cutoff modulation.",
       "tags": [
         "Filter"
-      ],
-      "keywords": "904B"
+      ]
     },
     {
       "slug": "Lackawanna",
@@ -62,8 +60,7 @@
       "tags": [
         "Filter",
         "Noise"
-      ],
-      "keywords": "923"
+      ]
     },
     {
       "slug": "Brandywine",
@@ -72,8 +69,7 @@
       "tags": [
         "Filter",
         "Equalizer"
-      ],
-      "keywords": "914"
+      ]
     },
     {
       "slug": "Juniata",
@@ -82,17 +78,15 @@
       "tags": [
         "Sequencer",
         "Clock generator"
-      ],
-      "keywords": "960"
+      ]
     },
     {
       "slug": "Conestoga",
       "name": "Conestoga Interface",
-      "description": "Converts audio and voltage triggers to patchable trigger signals, with two timed active-low banks.",
+      "description": "Converts audio to gates and translates between positive gates and active-low triggers, with two timed banks.",
       "tags": [
-        "Utility"
-      ],
-      "keywords": "961"
+        "Logic"
+      ]
     },
     {
       "slug": "Tioga",
@@ -101,8 +95,7 @@
       "tags": [
         "Switch",
         "Sequencer"
-      ],
-      "keywords": "962"
+      ]
     },
     {
       "slug": "Clarion",
@@ -111,8 +104,7 @@
       "tags": [
         "Mixer",
         "Multiple"
-      ],
-      "keywords": "CP3A-M"
+      ]
     },
     {
       "slug": "Kiski",
@@ -120,9 +112,9 @@
       "description": "Four cascaded attenuators, two signal multiples and bipolar reference voltages.",
       "tags": [
         "Attenuator",
-        "Multiple"
-      ],
-      "keywords": "CP35"
+        "Multiple",
+        "Quad"
+      ]
     },
     {
       "slug": "Loyalsock",
@@ -131,18 +123,20 @@
       "tags": [
         "Function generator",
         "Envelope generator",
-        "Slew limiter"
-      ],
-      "keywords": "Abacus"
+        "Slew limiter",
+        "Dual",
+        "Low-frequency oscillator",
+        "Attenuator"
+      ]
     },
     {
       "slug": "Swatara",
       "name": "Swatara Quantizer",
       "description": "Scale and chord quantizer with three outputs, a shift register and a hold loop.",
       "tags": [
-        "Quantizer"
-      ],
-      "keywords": "Quantimator"
+        "Quantizer",
+        "Sample and hold"
+      ]
     }
   ]
 }

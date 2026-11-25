@@ -70,11 +70,11 @@ struct KiskiModule : Module {
 
         Atten35::Inputs in;
         for (int i = 0; i < 4; i++) {
-            in.ain[i] = inputs[AIN1 + i].getVoltage();
+            in.ain[i] = k280vcv::inputVoltage(inputs[AIN1 + i]);
             in.ainConnected[i] = inputs[AIN1 + i].isConnected();
         }
-        in.maIn = inputs[MA_IN].getVoltage();
-        in.mbIn = inputs[MB_IN].getVoltage();
+        in.maIn = k280vcv::inputVoltage(inputs[MA_IN]);
+        in.mbIn = k280vcv::inputVoltage(inputs[MB_IN]);
 
         Atten35::Outputs o = atten.process(args.sampleRate, p, in);
         for (int i = 0; i < 4; i++) outputs[AOUT1 + i].setVoltage(o.aout[i]);

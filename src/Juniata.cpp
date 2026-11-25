@@ -82,11 +82,11 @@ struct JuniataModule : Module {
 
         configInput(OSC_ON, "Oscillator on (AC coupled, +3.5 V threshold)");
         configInput(OSC_OFF, "Oscillator off (AC coupled, +3.5 V threshold)");
-        configInput(OSC_CV, "Oscillator frequency CV (1 V/oct, ±2 V)");
+        configInput(OSC_CV, "Oscillator frequency CV (1 V/oct, limited to ±5 V)");
         for (int i = 0; i < 9; i++) configInput(SIN1 + i, string::f("Stage %d in (jump to stage, +3.5 V threshold)", i + 1));
         // Behringer_System_15_35_55_Manual.txt, p. 20; rack bench tests 8 and 22.
-        configInput(SHIFT, "Shift (rack advances with +0.571 V peak; ±5 V rated max)");
-        configOutput(OSC_OUT, "Oscillator out (rack: ~32% high)");
+        configInput(SHIFT, "Shift (advance one stage, +0.35 V threshold)");
+        configOutput(OSC_OUT, "Oscillator out (+5 V, 32% duty)");
         for (int i = 0; i < 9; i++) configOutput(SOUT1 + i, string::f("Stage %d out (+5 V while active)", i + 1));
         const char* rowName[3] = {"A", "B", "C"};
         for (int r = 0; r < 3; r++) {
@@ -116,17 +116,17 @@ struct JuniataModule : Module {
         in.oscOn = params[OSC_ON_BTN].getValue() > 0.5f;
         in.oscOff = params[OSC_OFF_BTN].getValue() > 0.5f;
         in.shift = params[SHIFT_BTN].getValue() > 0.5f;
-        in.oscOnV = inputs[OSC_ON].getVoltage();
-        in.oscOffV = inputs[OSC_OFF].getVoltage();
-        in.shiftV = inputs[SHIFT].getVoltage();
-        in.oscCv = inputs[OSC_CV].getVoltage();
+        in.oscOnV = k280vcv::inputVoltage(inputs[OSC_ON]);
+        in.oscOffV = k280vcv::inputVoltage(inputs[OSC_OFF]);
+        in.shiftV = k280vcv::inputVoltage(inputs[SHIFT]);
+        in.oscCv = k280vcv::inputVoltage(inputs[OSC_CV]);
         in.oscOnConnected = inputs[OSC_ON].isConnected();
         in.oscOffConnected = inputs[OSC_OFF].isConnected();
         in.shiftConnected = inputs[SHIFT].isConnected();
         in.oscCvConnected = inputs[OSC_CV].isConnected();
         for (int i = 0; i < 9; i++) {
             in.set[i] = params[SET1 + i].getValue() > 0.5f;
-            in.sin[i] = inputs[SIN1 + i].getVoltage();
+            in.sin[i] = k280vcv::inputVoltage(inputs[SIN1 + i]);
             in.sinConnected[i] = inputs[SIN1 + i].isConnected();
         }
 

@@ -40,7 +40,7 @@ struct MonongahelaModule : Module {
         configOutput(OUT, "Signal out (DC coupled)");
     }
 
-    void onSampleRateChange(const SampleRateChangeEvent& e) override { filter.reset(); }
+    void onSampleRateChange(const SampleRateChangeEvent&) override { filter.reset(); }
 
     void process(const ProcessArgs& args) override {
         Hpf904B::Params p;
@@ -48,10 +48,10 @@ struct MonongahelaModule : Module {
         p.range = int(std::round(params[RANGE].getValue()));
 
         Hpf904B::Inputs in;
-        in.in = inputs[IN].getVoltage();
-        in.cv[0] = inputs[CV1].getVoltage();
-        in.cv[1] = inputs[CV2].getVoltage();
-        in.cv[2] = inputs[CV3].getVoltage();
+        in.in = k280vcv::inputVoltage(inputs[IN]);
+        in.cv[0] = k280vcv::inputVoltage(inputs[CV1]);
+        in.cv[1] = k280vcv::inputVoltage(inputs[CV2]);
+        in.cv[2] = k280vcv::inputVoltage(inputs[CV3]);
 
         outputs[OUT].setVoltage(filter.process(args.sampleRate, p, in).out);
     }

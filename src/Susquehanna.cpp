@@ -69,14 +69,14 @@ struct SusquehannaModule : Module {
         p.clampMode = clampMode.load(std::memory_order_relaxed);
 
         Vco921::Inputs in;
-        in.fcv[0] = inputs[FCV1].getVoltage();
-        in.fcv[1] = inputs[FCV2].getVoltage();
-        in.fcv[2] = inputs[FCV3].getVoltage();
-        in.pw[0] = inputs[PW1].getVoltage();
-        in.pw[1] = inputs[PW2].getVoltage();
-        in.vtrig = inputs[VTRIG].getVoltage();
+        in.fcv[0] = k280vcv::inputVoltage(inputs[FCV1]);
+        in.fcv[1] = k280vcv::inputVoltage(inputs[FCV2]);
+        in.fcv[2] = k280vcv::inputVoltage(inputs[FCV3]);
+        in.pw[0] = k280vcv::inputVoltage(inputs[PW1]);
+        in.pw[1] = k280vcv::inputVoltage(inputs[PW2]);
+        in.vtrig = k280vcv::inputVoltage(inputs[VTRIG]);
         in.vtrigConnected = inputs[VTRIG].isConnected();
-        in.strig = inputs[STRIG].getVoltage();
+        in.strig = k280vcv::inputVoltage(inputs[STRIG]);
         in.strigConnected = inputs[STRIG].isConnected();
 
         vco.cal.unitOffsetSemitones = unitB ? k280::Vco921Calibration::unitBOffsetSemitones : 0.f;

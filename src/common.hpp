@@ -4,6 +4,7 @@
 #include <string>
 
 #include "Confidence.hpp"
+#include "input_voltage.hpp"
 #include "Knob.hpp"
 #include "plugin.hpp"
 

@@ -45,11 +45,11 @@ struct SchuylkillModule : Module {
         p.fixedCv = params[FIXED_CV].getValue();
 
         Vca902::Inputs in;
-        in.in = inputs[IN].getVoltage();
-        in.in2 = inputs[IN2].getVoltage();
-        in.cv[0] = inputs[CV1].getVoltage();
-        in.cv[1] = inputs[CV2].getVoltage();
-        in.cv[2] = inputs[CV3].getVoltage();
+        in.in = k280vcv::inputVoltage(inputs[IN]);
+        in.in2 = k280vcv::inputVoltage(inputs[IN2]);
+        in.cv[0] = k280vcv::inputVoltage(inputs[CV1]);
+        in.cv[1] = k280vcv::inputVoltage(inputs[CV2]);
+        in.cv[2] = k280vcv::inputVoltage(inputs[CV3]);
 
         Vca902::Outputs o = vca.process(args.sampleRate, p, in);
         outputs[OUT].setVoltage(o.out);

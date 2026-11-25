@@ -2,6 +2,8 @@
 
 Keystone 280 is a collection of 14 software modules for VCV Rack 2. Michael Perry built them from the modules in his own Behringer System 15 rack, which includes Moog 900-series-derived designs, and calibrated them against bench recordings and measurements of that rack. The result is close, not identical. See [Calibration](CALIBRATION.md) for the measurements and assumptions behind each module.
 
+Read the [user manual](docs/MANUAL.md) for controls, patch examples and voltage ranges.
+
 ## Modules
 
 - **Susquehanna Oscillator** — Pitch-controlled oscillator with six ranges, sub-audio operation and clamp sync.
@@ -35,7 +37,7 @@ make dist RACK_DIR=/path/to/windows/Rack-SDK CROSS=/path/to/bin/x86_64-w64-mingw
 make -C tests
 ```
 
-Clean the build before switching target platforms. The tests use native `g++` and can run without a Rack SDK.
+Clean the build before switching target platforms. The [native tests](tests/README.md) use `g++` and Python 3 and can run without a Rack SDK.
 
 ## Panels
 

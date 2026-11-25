@@ -88,7 +88,7 @@ struct ConestogaModule : Module {
         p.time[1] = params[TIME2].getValue();
 
         Interface961::Inputs in;
-        in.audio = inputs[AUD_IN].getVoltage();
+        in.audio = k280vcv::inputVoltage(inputs[AUD_IN]);
         in.audioConnected = inputs[AUD_IN].isConnected();
         const int sIn[2] = {S_IN1, S_IN2};
         // A and B jack ids per bank, jack 1..6.
@@ -96,12 +96,12 @@ struct ConestogaModule : Module {
         const int b[2][6] = {{B11, B12, B13, B14, B15, B16}, {B21, B22, B23, B24, B25, B26}};
         for (int k = 0; k < 2; k++) {
             auto& bank = in.bank[k];
-            bank.sIn = inputs[sIn[k]].getVoltage();
+            bank.sIn = k280vcv::inputVoltage(inputs[sIn[k]]);
             bank.sInConnected = inputs[sIn[k]].isConnected();
             for (int j = 0; j < Interface961::kJacksPerColumn; j++) {
-                bank.a[j] = inputs[a[k][j]].getVoltage();
+                bank.a[j] = k280vcv::inputVoltage(inputs[a[k][j]]);
                 bank.aConnected[j] = inputs[a[k][j]].isConnected();
-                bank.b[j] = inputs[b[k][j]].getVoltage();
+                bank.b[j] = k280vcv::inputVoltage(inputs[b[k][j]]);
                 bank.bConnected[j] = inputs[b[k][j]].isConnected();
             }
         }

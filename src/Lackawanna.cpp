@@ -58,8 +58,8 @@ struct LackawannaModule : Module {
         p.hp = params[HP].getValue();
 
         Filters923::Inputs in;
-        in.lpIn = inputs[LP_IN].getVoltage();
-        in.hpIn = inputs[HP_IN].getVoltage();
+        in.lpIn = k280vcv::inputVoltage(inputs[LP_IN]);
+        in.hpIn = k280vcv::inputVoltage(inputs[HP_IN]);
 
         Filters923::Outputs o = filters.process(args.sampleRate, p, in);
         outputs[LP_OUT].setVoltage(o.lpOut);

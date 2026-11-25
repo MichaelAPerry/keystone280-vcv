@@ -54,7 +54,7 @@ struct BrandywineModule : Module {
         configOutput(OUT2, "Signal out (parallel jack)");
     }
 
-    void onSampleRateChange(const SampleRateChangeEvent& e) override { bank = Bank914{}; }
+    void onSampleRateChange(const SampleRateChangeEvent&) override { bank = Bank914{}; }
 
     void process(const ProcessArgs& args) override {
         Bank914::Params p;
@@ -63,7 +63,7 @@ struct BrandywineModule : Module {
         p.hpLevel = params[HP_LEVEL].getValue();
 
         Bank914::Inputs in;
-        in.in = inputs[IN].getVoltage();
+        in.in = k280vcv::inputVoltage(inputs[IN]);
 
         Bank914::Outputs o = bank.process(args.sampleRate, p, in);
         outputs[IN_THRU].setVoltage(o.inThru);

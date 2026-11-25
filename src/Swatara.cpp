@@ -37,7 +37,7 @@ struct SwataraModule : Module {
             auto* m = dynamic_cast<SwataraModule*>(module);
             if (!m) return ParamQuantity::getDisplayValueString();
             const Quantimator::Params p = m->currentParams();
-            const float cv = m->inputs[CSCV].isConnected() ? m->inputs[CSCV].getVoltage() : 0.f;
+            const float cv = m->inputs[CSCV].isConnected() ? k280vcv::inputVoltage(m->inputs[CSCV]) : 0.f;
             const int i = m->quant.typeIndex(p, cv);
             return string::f("%d: %s", i, p.scaleMode ? Quantimator::scaleName(i) : Quantimator::chordName(i));
         }
@@ -75,11 +75,11 @@ struct SwataraModule : Module {
         const Quantimator::Params p = currentParams();
 
         Quantimator::Inputs in;
-        in.inV = inputs[IN].getVoltage();       in.inConnected = inputs[IN].isConnected();
-        in.trigV = inputs[TRIG].getVoltage();   in.trigConnected = inputs[TRIG].isConnected();
-        in.holdV = inputs[HOLD].getVoltage();   in.holdConnected = inputs[HOLD].isConnected();
-        in.transV = inputs[TRANS].getVoltage(); in.transConnected = inputs[TRANS].isConnected();
-        in.cscvV = inputs[CSCV].getVoltage();   in.cscvConnected = inputs[CSCV].isConnected();
+        in.inV = k280vcv::inputVoltage(inputs[IN]);       in.inConnected = inputs[IN].isConnected();
+        in.trigV = k280vcv::inputVoltage(inputs[TRIG]);   in.trigConnected = inputs[TRIG].isConnected();
+        in.holdV = k280vcv::inputVoltage(inputs[HOLD]);   in.holdConnected = inputs[HOLD].isConnected();
+        in.transV = k280vcv::inputVoltage(inputs[TRANS]); in.transConnected = inputs[TRANS].isConnected();
+        in.cscvV = k280vcv::inputVoltage(inputs[CSCV]);   in.cscvConnected = inputs[CSCV].isConnected();
 
         Quantimator::Outputs o = quant.process(args.sampleRate, p, in);
         for (int i = 0; i < 3; i++) outputs[OUT1 + i].setVoltage(o.out[i]);

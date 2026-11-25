@@ -126,20 +126,20 @@ struct LoyalsockModule : Module {
         p.patchedOutLeavesBus = patchedOutLeavesBus.load(std::memory_order_relaxed);
 
         Abacus::Inputs in;
-        in.in1 = inputs[IN1].getVoltage();    in.in1Connected = inputs[IN1].isConnected();
-        in.in2 = inputs[IN2].getVoltage();    in.in2Connected = inputs[IN2].isConnected();
-        in.in3 = inputs[IN3].getVoltage();    in.in3Connected = inputs[IN3].isConnected();
-        in.in4 = inputs[IN4].getVoltage();    in.in4Connected = inputs[IN4].isConnected();
-        in.trig1 = inputs[TRIG1].getVoltage(); in.trig1Connected = inputs[TRIG1].isConnected();
-        in.trig4 = inputs[TRIG4].getVoltage(); in.trig4Connected = inputs[TRIG4].isConnected();
-        in.rise1 = inputs[RISE1].getVoltage(); in.rise1Connected = inputs[RISE1].isConnected();
-        in.both1 = inputs[BOTH1].getVoltage(); in.both1Connected = inputs[BOTH1].isConnected();
-        in.fall1 = inputs[FALL1].getVoltage(); in.fall1Connected = inputs[FALL1].isConnected();
-        in.cycle1 = inputs[CYCLE1].getVoltage(); in.cycle1Connected = inputs[CYCLE1].isConnected();
-        in.rise4 = inputs[RISE4].getVoltage(); in.rise4Connected = inputs[RISE4].isConnected();
-        in.both4 = inputs[BOTH4].getVoltage(); in.both4Connected = inputs[BOTH4].isConnected();
-        in.fall4 = inputs[FALL4].getVoltage(); in.fall4Connected = inputs[FALL4].isConnected();
-        in.cycle4 = inputs[CYCLE4].getVoltage(); in.cycle4Connected = inputs[CYCLE4].isConnected();
+        in.in1 = k280vcv::inputVoltage(inputs[IN1]);    in.in1Connected = inputs[IN1].isConnected();
+        in.in2 = k280vcv::inputVoltage(inputs[IN2]);    in.in2Connected = inputs[IN2].isConnected();
+        in.in3 = k280vcv::inputVoltage(inputs[IN3]);    in.in3Connected = inputs[IN3].isConnected();
+        in.in4 = k280vcv::inputVoltage(inputs[IN4]);    in.in4Connected = inputs[IN4].isConnected();
+        in.trig1 = k280vcv::inputVoltage(inputs[TRIG1]); in.trig1Connected = inputs[TRIG1].isConnected();
+        in.trig4 = k280vcv::inputVoltage(inputs[TRIG4]); in.trig4Connected = inputs[TRIG4].isConnected();
+        in.rise1 = k280vcv::inputVoltage(inputs[RISE1]); in.rise1Connected = inputs[RISE1].isConnected();
+        in.both1 = k280vcv::inputVoltage(inputs[BOTH1]); in.both1Connected = inputs[BOTH1].isConnected();
+        in.fall1 = k280vcv::inputVoltage(inputs[FALL1]); in.fall1Connected = inputs[FALL1].isConnected();
+        in.cycle1 = k280vcv::inputVoltage(inputs[CYCLE1]); in.cycle1Connected = inputs[CYCLE1].isConnected();
+        in.rise4 = k280vcv::inputVoltage(inputs[RISE4]); in.rise4Connected = inputs[RISE4].isConnected();
+        in.both4 = k280vcv::inputVoltage(inputs[BOTH4]); in.both4Connected = inputs[BOTH4].isConnected();
+        in.fall4 = k280vcv::inputVoltage(inputs[FALL4]); in.fall4Connected = inputs[FALL4].isConnected();
+        in.cycle4 = k280vcv::inputVoltage(inputs[CYCLE4]); in.cycle4Connected = inputs[CYCLE4].isConnected();
         for (int i = 0; i < 4; i++) in.outConnected[i] = outputs[OUT1 + i].isConnected();
 
         Abacus::Outputs o = abacus.process(args.sampleRate, p, in);

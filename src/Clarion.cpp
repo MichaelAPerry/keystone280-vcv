@@ -94,9 +94,9 @@ struct ClarionModule : Module {
         p.master = params[MASTER].getValue();
 
         Mixer3::Inputs in;
-        for (int i = 0; i < 4; i++) in.in[i] = inputs[IN1 + i].getVoltage();
-        in.maIn = inputs[MA_IN].getVoltage();
-        in.mbIn = inputs[MB_IN].getVoltage();
+        for (int i = 0; i < 4; i++) in.in[i] = k280vcv::inputVoltage(inputs[IN1 + i]);
+        in.maIn = k280vcv::inputVoltage(inputs[MA_IN]);
+        in.mbIn = k280vcv::inputVoltage(inputs[MB_IN]);
 
         Mixer3::Outputs o = mixer.process(args.sampleRate, p, in);
         for (int i = 0; i < 3; i++) {
